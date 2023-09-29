@@ -24,9 +24,6 @@ body {
   position: relative;
 }
 
-.overlay-body {
-  overflow: hidden;
-}
 .overlay-body:after {
   content: "";
   position: absolute;
@@ -114,6 +111,9 @@ input {
   }
 }
 @media screen and (max-width: 540px) {
+  .overlay-body {
+    overflow-y: hidden;
+  }
   h2 {
     font-size: 40px;
   }
