@@ -1,0 +1,113 @@
+.subscribe {
+    background-color: #fff;
+    color: #0B0A0D;
+    padding: 50px 0px;
+    &__heading {
+        width: 35%;
+    }
+}
+.form {
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 15px;
+    }
+    &__block {
+        &:first-child {
+            margin-right: 20px;
+        }
+    }
+    &__input {
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.40);
+        padding: 15px 0px 15px 20px;
+        font-size: 14px;
+        line-height: 20px;
+        width: 400px;
+        height: 50px;
+        margin-bottom: 20px;
+        &:focus {
+            border-color: #000;
+            color: #0B0A0D;
+        }
+    }
+    .date-form {
+        position: relative;
+        &:not(.has-value):before {
+            content: attr(placeholder);
+            width: 100%;
+        }
+        &::-webkit-calendar-picker-indicator {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            height: auto;
+            color: transparent;
+            background: transparent;
+        }
+        &::-webkit-inner-spin-button, &::-webkit-clear-button {
+            z-index: -10;
+        }
+        &::-webkit-input-placeholder {
+            z-index: 99;
+        }
+        &::placeholder {
+            z-index: 99;
+        }
+    }
+    &__submit {
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.40);
+        padding: 0px 20px;
+        height: 50px;
+        cursor: pointer;
+        background-color: #fff;
+        font-size: 16px;
+        transition: 0.3s;
+        &:hover {
+            background-color: #75FF72;
+            border-color: #75FF72;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .subscribe {
+        &__heading {
+            width: 50%;
+        }
+    }
+    .form {
+        &__block {
+            width: 50%;
+        }
+        &__input {
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 540px){
+    .subscribe {
+        &__heading {
+            width: 70%;
+        }
+    }
+    .form {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__block {
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 375px){
+    .subscribe {
+        &__heading {
+            width: 80%;
+        }
+    }
+}
