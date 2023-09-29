@@ -129,6 +129,126 @@ input {
     margin-bottom: 10px;
   }
 }
+.faq {
+  padding: 75px 0px 50px 0px;
+}
+.faq__wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+.faq__title {
+  margin-right: 100px;
+}
+.faq .list {
+  width: 100%;
+}
+.faq .list__item {
+  width: 100%;
+  padding: 30px 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+.faq .list__item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.faq .list__content {
+  overflow: hidden;
+  display: block;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+}
+.faq .list__item--active {
+  border-color: #fff;
+}
+.faq .list__item--active .list__content {
+  display: block;
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  margin-top: 30px;
+}
+.faq .list__content--active {
+  display: block;
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .faq {
+    padding: 50px 0px;
+  }
+  .faq__wrapper {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 375px) {
+  .faq {
+    padding: 40px 0px;
+  }
+  .faq .list__item {
+    padding: 20px 0px;
+  }
+}
+.footer {
+  background-color: #312F35;
+  padding: 55px 0px 80px 0px;
+}
+.footer__wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 60%;
+}
+.footer__title {
+  margin-bottom: 10px;
+}
+.footer__text {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.footer__link {
+  text-decoration: underline;
+  font-size: 14px;
+}
+.footer__content {
+  width: 55%;
+}
+.footer .social {
+  display: flex;
+  align-items: center;
+}
+.footer .social__item svg path {
+  transition: 0.3s;
+}
+.footer .social__item:not(:last-child) {
+  margin-right: 30px;
+}
+.footer .social__item:hover svg path {
+  fill: #75ff72;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__wrapper {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .footer {
+    padding: 80px 0px 167px 0px;
+  }
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__content {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
 .subscribe {
   background-color: #fff;
   color: #0B0A0D;
@@ -227,70 +347,6 @@ input {
 @media screen and (max-width: 375px) {
   .subscribe__heading {
     width: 80%;
-  }
-}
-.faq {
-  padding: 75px 0px 50px 0px;
-}
-.faq__wrapper {
-  display: flex;
-  align-items: flex-start;
-}
-.faq__title {
-  margin-right: 100px;
-}
-.faq .list {
-  width: 100%;
-}
-.faq .list__item {
-  width: 100%;
-  padding: 30px 0px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  cursor: pointer;
-}
-.faq .list__item:last-child {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-.faq .list__content {
-  overflow: hidden;
-  display: block;
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.4s;
-}
-.faq .list__item--active {
-  border-color: #fff;
-}
-.faq .list__item--active .list__content {
-  display: block;
-  height: auto;
-  opacity: 1;
-  visibility: visible;
-  margin-top: 30px;
-}
-.faq .list__content--active {
-  display: block;
-  height: auto;
-  opacity: 1;
-  visibility: visible;
-  margin-top: 30px;
-}
-
-@media screen and (max-width: 768px) {
-  .faq {
-    padding: 50px 0px;
-  }
-  .faq__wrapper {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 375px) {
-  .faq {
-    padding: 40px 0px;
-  }
-  .faq .list__item {
-    padding: 20px 0px;
   }
 }
 .header {
@@ -583,61 +639,5 @@ input {
   }
   .slider__nav {
     margin-top: 20px;
-  }
-}
-.footer {
-  background-color: #312F35;
-  padding: 55px 0px 80px 0px;
-}
-.footer__wrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 60%;
-}
-.footer__title {
-  margin-bottom: 10px;
-}
-.footer__text {
-  font-size: 14px;
-  margin-bottom: 25px;
-}
-.footer__link {
-  text-decoration: underline;
-  font-size: 14px;
-}
-.footer__content {
-  width: 55%;
-}
-.footer .social {
-  display: flex;
-  align-items: center;
-}
-.footer .social__item svg path {
-  transition: 0.3s;
-}
-.footer .social__item:not(:last-child) {
-  margin-right: 30px;
-}
-.footer .social__item:hover svg path {
-  fill: #75ff72;
-}
-
-@media screen and (max-width: 768px) {
-  .footer__wrapper {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 450px) {
-  .footer {
-    padding: 80px 0px 167px 0px;
-  }
-  .footer__wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer__content {
-    width: 100%;
-    margin-bottom: 40px;
   }
 }
